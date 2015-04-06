@@ -1,0 +1,25 @@
+IsLegalMoves or IsValidMove doesn't properly check if a move is legal or not
+
+This is a problem starting from the chooseMove function inside the MachinePlayer
+
+"LegalMoves.allLegalMoves(gameboard,machine_color).front();"
+
+So check LegalMoves.java
+
+Give a better score to more spread out coordinates on the board-
+do this in the Evaluate method. Extract a move from the board, and 
+
+make some helper in evaluate that calculates the distance between
+them and then awards a higher score to more spread out pieces 
+
+
+Once clause in Evaluate was wrong because you shouldn't just
+make a score closer to -1 automatically be -1 because -1 means that
+you've got a winning move for the opponent.
+The same goes for the winning move for the player (1).                   
+^ Now done   
+
+Pieces already in the goals mean you get a higher score
+
+pieces next to each other can be good, but avoid clusters
+
